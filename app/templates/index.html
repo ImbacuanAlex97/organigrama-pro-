@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="controls-panel">
+        <h2>Panel de Control</h2>
+        <div class="form-group">
+            <button id="btn-crear-principal" class="btn">Crear Nodo Principal</button>
+        </div>
+        
+        <div id="form-edicion" class="form-edicion hidden">
+            <h3>Editar Nodo</h3>
+            <input type="hidden" id="nodo-id">
+            <div class="form-group">
+                <label for="nombre-nodo">Nombre:</label>
+                <input type="text" id="nombre-nodo" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="cargo-nodo">Cargo:</label>
+                <select id="cargo-nodo" class="form-control">
+                    <option value="directo">Directo</option>
+                    <option value="asesoria">Asesoría</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button id="btn-guardar" class="btn">Guardar</button>
+                <button id="btn-cancelar" class="btn btn-secondary">Cancelar</button>
+                <button id="btn-eliminar" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="organigrama-container">
+        <div id="organigrama" class="organigrama"></div>
+    </div>
+</div>
+{% endblock %}

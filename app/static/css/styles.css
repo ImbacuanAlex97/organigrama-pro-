@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #35424a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    min-height: calc(100vh - 120px);
+}
+
+.controls-panel {
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.organigrama-container {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+}
+
+.organigrama {
+    min-height: 800px;
+    position: relative;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.nodo {
+    position: absolute;
+    min-width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.nodo:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Colores para diferentes niveles jerárquicos */
+.nivel-1 {
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+}
+
+.nivel-2 {
+    background-color: #e8f5e9;
+    border: 2px solid #4caf50;
+}
+
+.nivel-3 {
+    background-color: #fff3e0;
+    border: 2px solid #ff9800;
+}
+
+.nivel-4 {
+    background-color: #fce4ec;
+    border: 2px solid #e91e63;
+}
+
+.nivel-5 {
+    background-color: #f3e5f5;
+    border: 2px solid #9c27b0;
+}
+
+.conexion {
+    position: absolute;
+    background-color: #999;
+    z-index: 1;
+}
+
+.conexion-directa {
+    border-top: 2px solid #555;
+}
+
+.conexion-asesoria {
+    border-top: 2px dashed #555;
+}
+
+/* Controles y formularios */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: #35424a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #2a363e;
+}
+
+.btn-secondary {
+    background-color: #777;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.hidden {
+    display: none;
+}
+
+.nodo-opciones {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    z-index: 20;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.opcion-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.opcion-btn:hover {
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #35424a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
